@@ -40,7 +40,7 @@ export default {
 </script>
 <template>
    <footer
-      :class="` flex flex-col TB:flex-row TB:justify-between items-start gap-y-9 w-full max-w-[425px] TB:max-w-[1024px] DT:max-w-[1920px] px-8 TB:px-10 DT:px-[165px] py-12 TB:py-14 ${getData.bgColor} ${getData.txtColor}`">
+      :class="` flex flex-col TB:flex-row TB:justify-between items-start gap-y-9 w-full max-w-[425px] TB:max-w-[1024px] DT:max-w-[1920px] px-8 TB:px-10 DT:px-[165px] py-12 TB:py-14 DT:py-20 ${getData.bgColor} ${getData.txtColor}`">
       <img class=" h-10 DT:h-[58px] select-none" :src="getData.logoStyle" alt="logoLight" draggable="false">
       <p
          class=" TB:w-[38%] TB:-ml-[10%] DT:-ml-[15%] text-[16px] DT:text-[18px] leading-[26px] DT:leading-[28px] font-outfit font-light">
