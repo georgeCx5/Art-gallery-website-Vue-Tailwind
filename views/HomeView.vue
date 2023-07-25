@@ -3,11 +3,25 @@ import RouterBtn from '../components/RouterBtn.vue';
 import FooterComponent from '../components/FooterComponent.vue';
 
 import imgHero from '@/assets/images/mobile/image-hero@2x.jpg'
+import imgGridOneMB from '@/assets/images/mobile/image-grid-1.jpg'
+import imgGridTwoMB from '@/assets/images/mobile/image-grid-2.jpg'
+import imgGridThreeMB from '@/assets/images/mobile/image-grid-3.jpg'
 
 export default {
    data() {
       return {
          imgHero,
+         dataImg: [
+            {
+               imgMB: imgGridOneMB,
+            },
+            {
+               imgMB: imgGridTwoMB,
+            },
+            {
+               imgMB: imgGridThreeMB,
+            },
+         ]
       }
    },
    components: {
@@ -35,6 +49,35 @@ export default {
             </div>
          </div>
       </header>
+      <main class=" flex flex-col gap-8 max-w-[425px] px-4">
+         <div class=" flex flex-col gap-6">
+            <img class=" select-none" :src="dataImg[0].imgMB" alt="imgOneMB" draggable="false">
+            <div class=" flex flex-col gap-5">
+               <div class=" text-[50px] leading-[45px] font-black uppercase">
+                  <h2>Your day</h2>
+                  <h2>at the gallery</h2>
+               </div>
+               <p class=" text-neo-gray text-[18px] leading-[28px] font-outfit font-light">
+                  Wander through our distinct collections and find new insights about
+                  our artists. Dive into the details of their creative process.
+               </p>
+            </div>
+         </div>
+         <div class=" grid grid-cols-1 gap-4">
+            <img class=" w-full select-none" :src="dataImg[1].imgMB" alt="imgTwoMB" draggable="false">
+            <img class=" w-full select-none" :src="dataImg[2].imgMB" alt="imgTwoMB" draggable="false">
+            <div class=" flex flex-col gap-6 px-6 py-12 bg-neo-black text-neo-white">
+               <div class=" text-[50px] leading-[45px] font-black uppercase">
+                  <h2>Come &amp; be</h2>
+                  <h2>inspired</h2>
+               </div>
+               <p class=" text-[18px] leading-[28px] font-outfit font-light">
+                  We’re excited to welcome you to our gallery and see how our collections
+                  influence you.
+               </p>
+            </div>
+         </div>
+      </main>
       <FooterComponent :is-main-footer="true" />
    </body>
 </template>
